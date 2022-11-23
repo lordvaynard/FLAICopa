@@ -4,8 +4,8 @@ import numpy as np
 import random
 from scipy.stats import poisson
 
-selecoes = pd.read_excel('DadosCopaDoMundoQatar2022.xlsx', sheet_name = 'selecoes', index_col = 0)
-jogos = pd.read_excel('DadosCopaDoMundoQatar2022.xlsx', sheet_name = 'jogos')
+selecoes = pd.read_excel('FLAI/DadosCopaDoMundoQatar2022.xlsx', sheet_name = 'selecoes', index_col = 0)
+jogos = pd.read_excel('FLAI/DadosCopaDoMundoQatar2022.xlsx', sheet_name = 'jogos')
 
 jogos.head()
 
@@ -100,7 +100,7 @@ for i in range(jogos.shape[0]):
   jogos.at[i, 'Empate'] = e
   jogos.at[i, 'Derrota'] = d
 
-jogos.to_excel('outputEstimativasJogosCopa.xlsx')
+jogos.to_excel('FLAI/outputEstimativasJogosCopa.xlsx')
 #jogos
 
 #d1, d2 = np.around(Distribuicao(1.478048191315901),2), np.around(Distribuicao(1.271951808684099),2)
